@@ -1,7 +1,7 @@
 <h1>AT2 prática em grupo UCB</h1>
 <h2>Sistema de Bancos</h2>
 
-![Cartão de CREBITO](https://github.com/user-attachments/assets/2f38a823-46c9-4c3f-b1b6-6298c41df3ba)
+![Cartão de CREBITO](https://www.google.com/search?q=imagem+de+servidor+do+google+desenho&sca_esv=7ec7b14a29e3f231&udm=2&biw=1920&bih=953&sxsrf=ADLYWIL6nNqBOEMQfF6rZ44XZQZ7OHlGGA%3A1732496950391&ei=Ns5DZ9_CF_DJ1sQPtsC10Ao&ved=0ahUKEwjftbWKpvaJAxXwpJUCHTZgDaoQ4dUDCBA&uact=5&oq=imagem+de+servidor+do+google+desenho&gs_lp=EgNpbWciJGltYWdlbSBkZSBzZXJ2aWRvciBkbyBnb29nbGUgZGVzZW5ob0jrGFD5A1iNFXABeACQAQCYAfMCoAHJCqoBBzAuNy4wLjG4AQPIAQD4AQGYAgCgAgCYAwCIBgGSBwCgB-gC&sclient=img#vhid=D64QQHUbtePeFM&vssid=mosaic)
 <h3>Explicação do projeto</h3>
 <p>Esse projeto contém as seguintes entidades: Banco, Funcionário, Loja, Cliente e Conta! <br> </p>
 
