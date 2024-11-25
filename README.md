@@ -1,23 +1,53 @@
 <h1>AT2 prática em grupo UCB</h1>
-<h2></h2>
+<h2>Sistema de buscas</h2>
 
-![DATACENTER](![WhatsApp Image 2024-11-24 at 10 11 25 PM](https://github.com/user-attachments/assets/0ff4be02-3f55-4e1c-ac1b-8f35a087f90c)
-)
-<h3>Explicação do projeto</h3>
-<p>Esse projeto contém as seguintes entidades: Banco, Funcionário, Loja, Cliente e Conta! <br> </p>
+(![WhatsApp Image 2024-11-24 at 10 11 25 PM](https://github.com/user-attachments/assets/0ff4be02-3f55-4e1c-ac1b-8f35a087f90c)
 
-## Cliente
-<p>Cada cliente é uma thread e todos começam com 2.000 reais de saldo e todos
-devem fazer 2 compras com um valor aleatório em cada Loja!</p>
+Distributed Search System
+Este projeto implementa um sistema de busca distribuído utilizando Java e sockets. O sistema é composto por dois servidores (A e B), cada um responsável por buscar em uma parte de um conjunto de dados de artigos científicos. O servidor A recebe a solicitação de busca do cliente, envia para o servidor B, e ambos realizam a busca nos dados. Após a execução, o servidor A retorna os resultados ao cliente.
 
-## Loja
-<p>Cada loja possui uma conta pra receber os pagamentos dos clientes e deve pagar os funcionários assim que tiver o valor dos salários em conta!</p>
+Funcionalidades
+Servidor A: Recebe a solicitação de busca do cliente, repassa para o Servidor B, e retorna os resultados finais.
+Servidor B: Realiza a busca na sua parte dos dados e retorna os resultados para o Servidor A.
+Busca: A busca é feita por substrings nos títulos e introduções dos artigos.
+Cliente: Envia uma substring para o Servidor A e recebe os resultados.
+Estrutura de Diretórios
+bash
+Copiar código
+/src
+  /client         # Código do cliente
+  /server         # Código do Servidor A e B
+  /utils          # Funções auxiliares, como o parser do arquivo JSON
+/arxiv.json       # Arquivo com os dados dos artigos científicos
+Como rodar
+Clone o repositório:
 
-## Funcionários
-<p>Cada funcionário é uma thread, é tem duas contas, uma pra receber o salário da loja  e outra de investimentos, suas contas começaram zeradas é eles são obrigados a investir 20% do salário na conta de investimentos!</p>
+bash
+Copiar código
+git clone <URL_DO_REPOSITÓRIO>
+cd <diretório_do_repositório>
+Execute os Servidores:
 
-## Banco
-<p>O banco intermedia as transações de forma síncrona e coordenada, garantindo a consistência dos saldos em conta!</p>
+Inicie o Servidor A:
+bash
+Copiar código
+java -cp out/production/distributedsearch com.example.distributedsearch.server.ServerA
+Inicie o Servidor B:
+bash
+Copiar código
+java -cp out/production/distributedsearch com.example.distributedsearch.server.ServerB
+Execute o Cliente:
+
+bash
+Copiar código
+java -cp out/production/distributedsearch com.example.distributedsearch.client.Client
+Requisitos
+Java 17
+Biblioteca JSON (org.json) para manipulação de arquivos JSON
+Exemplo de Execução
+O cliente envia a substring "AI" para o Servidor A.
+O Servidor A consulta o Servidor B e ambos buscam nos dados.
+O Servidor A retorna os artigos encontrados ao cliente.
 
 ## Tecnologias Usadas
 ![Java](https://img.shields.io/badge/Java-0D1117?style=for-the-badge&logo=openjdk&logoColor=white)&nbsp;
